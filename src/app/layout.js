@@ -1,12 +1,14 @@
+import Footer1 from "../../components/Footer1";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import "../../styles/globals.css"
-import { Poppins } from "next/font/google";
+import { Roboto } from "next/font/google"
+import Slider from "../../components/Slider";
 
-const inter = Poppins({
-  subsets: ["latin"],
+const inter = Roboto({
+  subsets: ["latin-ext"],
   style: ["normal"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "700", "900",  ],
 });
 
 export const metadata = {
@@ -31,7 +33,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header/>
         {children}
-        <Footer/>
+      {/*  <Footer1/>  */}
+        {/* <Footer/> */}
+       {/*  <Slider/> */}
       </body>
     </html>
   );

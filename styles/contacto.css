@@ -1,64 +1,238 @@
-#contacto {
-    width: 90%;
-    max-width: var(--max-width);
-    margin: var(--margin);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap-reverse;
-    gap:25px
+#testimonios {
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding-left: 110px;
+  background-color: #e0d9d9;
 }
 
-#contacto .text{
-    flex: 1;
-    min-width: 400px;
+#testimonios .main__action {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 999; /* Asegura que el botón esté sobre otros elementos */
+  animation: scroll-down 1.5s infinite; /* Agrega la animación aquí */
+}
+/* ... Otros estilos ... */
+
+/* Animate scroll icon */
+@keyframes scroll-down {
+  0%, 100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+}
+#testimonios h1 {
+  width: 105%;
 }
 
-#contacto form{
+#testimonios .heading {
+  width: 100%;
+  text-align: start;
+}
+
+#testimonios .heading h1 {
+  margin-top: 110px;
+  font: 120px/1 'Titling Gothic Skyline', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 900;
+  color: rgb(255, 252, 252);
+}
+
+.horizontal-line-2 {
+  margin-top: 20px;
+  height: 2px;
+  width: 20%;
+  background-color: #019b21;
+  margin-left: 20px;
+}
+
+#testimonios .img-container {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+}
+
+#testimonios .slider {
+  position: relative;
+  top: -80px;
+  flex: 1;
+  min-width: 400px;
+  padding-left: 25px;
+  margin-right: 60px;
+}
+
+#testimonios .card {
+  background: #404741;  
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 20px;
+  box-shadow: 2px 20px 30px var(--shadow-color);
+  border-radius: 2%;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+#testimonios .img-container img:hover {
+  transform: scale(1.08);
+}
+#testimonios .redes {
+  display: inline-block;
+  padding-left: 45px; /* Hacer que los elementos <a> sean en línea */
+  margin-right: 35px; /* Espacio entre elementos <a> */
+  font-size: 25px;
+  top: 0px;
+  position: relative;
+  color: rgb(32, 30, 30);
+}
+#testimonios .svg i {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  font-size: xxx-large;
+  color: #019b21;
+  transition: transform 0.3s ease;
+}
+#testimonios .svg:hover i {
+  transform: rotate(90deg);
+}
+#testimonios .redes:hover {
+  color: #019b21;
+}
+#testimonios .img-container img {
+  margin-top: 20px;
+  transition: all linear 0.5s;
+}
+
+#testimonios .avatar {
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+  border-radius: 30%;
+  overflow: hidden;
+  background: var(--secondary);
+}
+
+#testimonios .text {
+  flex: 1;
+  min-width: 200px;
+  align-items: self-start;
+  justify-content: first baseline;
+}
+#testimonios .text i {
+  color: black;
+  font-size: 1.2rem;
+}
+
+#testimonios .text p {
+  color: rgb(8, 8, 8);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+#testimonios .text strong {
+  color: #363636;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+  #testimonios .map {
     width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
-    background: #fff;
-    margin-top: 30px;
-    box-shadow: 2px 2px 30px var(--shadow-color);
-}
+    margin-left: 3px;
+    height: 500px;
+  }
+@media (max-width: 888px) {
+  
+  #testimonios .main__action {
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    z-index: 999; /* Asegura que el botón esté sobre otros elementos */
+    animation: scroll-down 1.5s infinite; /* Agrega la animación aquí */
+  }
+  #testimonios {
+    align-items: start; /* Centrar elementos en pantallas más pequeñas */
+    padding-left: 70px; /* Reducir el espacio a la izquierda en pantallas más pequeñas */
+  }
+  #testimonios .slider{
+    min-width: 200px;
+    margin-left: -46px;
+    margin-right: 66px;
+    margin-top: 80px;
+  }
+  #testimonios .img-container {
+    margin-top: 100px;
+    min-width: 320px;
+    margin-left: -12px;
+    margin-right: 66px;
+    flex-direction: column; 
+  }
 
-#contacto form input{ 
-    width: 100%;
-    padding: 0 20px;
+  #testimonios .map {
+    width: 95%;
+    margin-left: 3px;
+    height: 400px;
+  }
+
+  #testimonios .redes {
+    display: inline-block;
+    padding-left: 22px; /* Hacer que los elementos <a> sean en línea */
+    margin-right: 6px; /* Espacio entre elementos <a> */
     font-size: 20px;
+    top: 0px;
+    position: relative;
+    color: rgb(43, 40, 40);
+  }
+  #testimonios .redes:hover {
+    color: #019b21;
+  }
+  
+  #testimonios  .horizontal-line-2 {
+    height: 2px;
+    width: 45%;
+    background-color: #019b21;
+    margin-left: -50px;
+    position: relative;
+    top: -10px;
+  }
+  #testimonios .heading {
+    
+    width: 100%;
+    text-align: start;
+    height: 100px;
+    margin-left: 30px;
+    position: relative;
+    top: -30px;
+  }
+
+  #testimonios .heading h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    margin-left: -60px;
+
+  }
+
+  #testimonios .img-container  h1 { 
+    width: 92%;
+   
+  }
 }
-
- #contacto form button {
-    width: 50px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    background: black;
-    color: #fff;
-    box-shadow: 2px 2px 30px var(--shadow-color);
-    cursor: pointer;
-    transition: all ease 0.3s;
- }   
-
- #contacto form button:hover {
-    box-shadow: 2px 10px 30px var(--shadow-color-hover);
- }
-
- #contacto .img-container {
-    flex: 1 ;
-    min-width: 300px;
- }
-
- @media (max-width: 450px){
-    #contacto .text,
-    #contacto .img-container{
-        min-width: 200px
-    }
- }

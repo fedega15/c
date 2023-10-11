@@ -1,13 +1,98 @@
 header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    user-select: none;
-    transition: all ease-in-out 0.3s;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  user-select: none;
+  transition: all ease-in-out 0.3s;
+}
+header nav {
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(max-width);
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+}
+header .logo {
+  justify-content: flex-start;
+  left: 0px;
+  font-size: 1.9rem;
+  color:black;
+  font-weight: 900;
 }
 
+header ul {
+  position: absolute;
+  top: 0%;
+  right: 0;
+  background: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 20%;
+  box-shadow: 2px 20px 30px var(--shadow-color);
+  transition: all ease-in-out 0.3s;
+  height: 1000555px;
+  overflow: hidden;
+}
+
+header ul li a {
+  padding: 10px;
+  display: block;
+  margin-left: 40px;
+  margin-top: 15px;
+  border-bottom: 1px solid var(--border-color);
+  color: white;
+  font-family: 'Titling Gothic Skyline',Arial,Helvetica,sans-serif;;
+  text-transform: uppercase;
+  font-size: x-large;
+}
+
+header ul li a:is(:hover) {
+    color:#019b21;
+}
+.menu-d:is(:hover, .active) {
+  color: rgb(20, 20, 20);
+    background-color:#019b21;
+}
+.menu-d {
+    width: 90px;
+    height:45px ;
+    background-color: white;
+    color: black;
+    font-size: large;
+    
+}
+header nav .menu_btn {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--main);
+  display: block;
+}
+header .box-redes {
+  margin-left: 25px;
+  top:  200px;
+}
+header .box-li {
+  margin-top: 25px;
+  margin-left: 10px;
+}
+.redes {
+  display: inline-block;
+  padding-left: 4px; /* Hacer que los elementos <a> sean en línea */
+  margin-right: 15px; /* Espacio entre elementos <a> */
+  font-size: 25px;
+  top: 130px;
+  position: relative;
+  color: rgb(243, 237, 237);
+}
+.redes:hover {
+  color:#019b21;
+}
+
+/* esto tenia arriba lo modifique para que quede menu hamburgesa
 header nav {
     width: 100%;
     max-width: var(max-width);
@@ -16,6 +101,11 @@ header nav {
     align-items: center;
     margin: 0 auto;
     padding: 15px 25px;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header .logo {
@@ -31,11 +121,6 @@ header .logo {
     color: rgb(40, 40, 70);
 }
 
-header ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 header ul li a {
     font-size:  1.6rem;
@@ -44,9 +129,8 @@ header ul li a {
     color: var(--secondary);
     transition: all ease 0.3s;
     text-transform: capitalize;
-}
-
-header ul li a:is(:hover, .active) {
+    display: block;
+}ºeader ul li a:is(:hover, .active) {
     color: rgb(40, 40, 70);
 }
 
@@ -55,35 +139,180 @@ header nav .menu_btn {
     cursor: pointer;
     color: var(--main);
     display: none;
+} */
+
+.logo {
+margin-top: -20px;
+margin-bottom: -20px;
+}
+@media (min-width: 1150px) {
+  header nav {
+    justify-content: space-between;
+  }
+  header ul {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    background: var(--bg-main);
+    display: block;
+    width: 20%;
+    box-shadow: 2px 20px 30px var(--shadow-color);
+    transition: all ease-in-out 0.3s;
+    height: 0px;
+    overflow: hidden;
+  }
+  header ul li a {
+    padding: 10px;
+    display: block;
+    margin-left: 25px;
+    margin-top: 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: white;
+    font-family: 'Titling Gothic Skyline',Arial,Helvetica,sans-serif;;
+    text-transform: uppercase;
+    font-size: x-large;
+  }
+
+  header nav .menu_btn {
+    display: block;
+  }
+
+  header .box-li {
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+
+  header .box-redes {
+    margin-left: 15px;
+    top:600px;
+  }
+  .redes {
+    display: inline-block;
+    padding-left: 22px;
+    margin-right: 5px; 
+    font-size:25px;
+    top: 100px;
+    position: relative;
+    color: rgb(241, 227, 227);
+  }
+  .redes:hover {
+    color:#019b21;
+  }
 }
 
-@media (max-width:840px) {
-    header nav{
-        justify-content: space-between;
-    }
-    header ul {
-        position: absolute;
-        top: 80%;
-        left: 0;
-        background:var(--bg-main);
-        display: block;
-        width: 100%;
-        box-shadow: 2px 20px 30px var(--shadow-color);
-        transition: all ease-in-out 0.3s;
-        height: 0px;
-        overflow:hidden;
-    }
 
-    header ul li a{
-      
-        display: block;
-        padding: 7px;
-        border-bottom: 1px solid var( --border-color);
-    }
 
+
+@media (max-width: 1150px) {
+  header nav {
+    justify-content: space-between;
+  }
+  header ul {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    background: var(--bg-main);
+    display: block;
+    width: 25%;
+    box-shadow: 2px 20px 30px var(--shadow-color);
+    transition: all ease-in-out 0.3s;
+    height: 0px;
+    overflow: hidden;
+  }
+header ul li a {
+  padding: 10px;
+  display: block;
+  margin-left: 2px;
+  margin-top: 15px;
+  border-bottom: 1px solid var(--border-color);
+  color: white;
+  font-family: 'Titling Gothic Skyline',Arial,Helvetica,sans-serif;;
+  text-transform: uppercase;
+  font-size: large;
+}
+
+  header nav .menu_btn {
+    display: block;
+  }
+
+  header .box-li {
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+
+  header .box-redes {
+    margin-left: 15px;
+    top:600px;
+  }
+  .redes {
     
-header nav .menu_btn {
-    display: block ;
+    display: inline-block;
+    padding-left: 7px;
+    margin-right: 3px; 
+    font-size:25px;
+    top: 100px;
+    position: relative;
+    color: rgb(243, 237, 237);
+  }
+  .redes:hover {
+    color:#019b21;
+  }
+}
+@media (max-width: 666px) {
+  header nav {
+    justify-content: space-between;
+  }
+  header ul {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    background: var(--bg-main);
+    display: block;
+    width: 50%;
+    box-shadow: 2px 20px 30px var(--shadow-color);
+    transition: all ease-in-out 0.3s;
+    height: 0px;
+    overflow: hidden;
+  }
+header ul li a {
+  padding-top: 10px;
+  display: block;
+  
+  margin-top: 15px;
+  border-bottom: 1px solid var(--border-color);
+  color: white;
+  font-family: 'Titling Gothic Skyline',Arial,Helvetica,sans-serif;;
+  text-transform: uppercase;
+  font-size: large;
+}
 
+  header nav .menu_btn {
+    display: block;
+  }
+
+  header .box-li {
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+
+  header .box-redes {
+    margin-left: 15px;
+    top:600px;
+  }
+  .redes {
+    
+    display: inline-block;
+    padding-left: 7px;
+    margin-right: 3px; 
+    font-size:25px;
+    top: 120px;
+    position: relative;
+    color: rgb(243, 237, 237);
+  }
+  .redes:hover {
+    color:#019b21;
+  }
 }
-}
+
+
+
