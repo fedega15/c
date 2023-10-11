@@ -31,6 +31,7 @@
 }
 #galery .text {
 width: 320px;
+padding: 10px;
 }
 #galery .card {
   width: 100%;
@@ -44,12 +45,12 @@ width: 320px;
 
 #galery .card img {
   transition: all linear 0.5s;
-  /*  filter: grayscale(100%);  */
+  filter: grayscale(100%);  
 }
 
 #galery .card:hover .group .text  {
   background: rgba(238, 123, 29, 0.7);
-  padding: 10px;
+
 }
 /*  #galery .card:hover .box {
   background: rgba(238, 123, 29, 0.7);
@@ -78,7 +79,7 @@ width: 320px;
 
 #galery .card:hover img {
   transform: scale(1.08);
-  filter: grayscale(100%);
+/*   filter: grayscale(100%); */
 } /*  filter: grayscale(0%); 
     /* 
     #galery .card-1:hover img{
