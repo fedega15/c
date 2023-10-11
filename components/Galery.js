@@ -83,7 +83,7 @@ const Galery = () => {
                 />
                 <div className="box">
                   <span className="star">
-                    { /*  {galeria.name === "ARQUITECTURA" && <button><i class="fa-solid fa-hand-pointer"></i></button>} */}
+                    {/*  {galeria.name === "ARQUITECTURA" && <button><i class="fa-solid fa-hand-pointer"></i></button>} */}
                     {/*    <i className="fa-solid fa-star"></i>
                 {galeria.activites} */}
                   </span>
