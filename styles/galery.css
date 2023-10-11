@@ -47,6 +47,10 @@ padding: 10px;
   transition: all linear 0.5s;
   filter: grayscale(0%);  
 }
+#galery .card:hover img {
+  transition: all linear 0.5s;
+  filter: grayscale(100%);  
+}
 
 #galery .card:hover .group .text  {
   background: rgba(238, 123, 29, 0.7);
