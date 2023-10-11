@@ -45,7 +45,7 @@ padding: 10px;
 
 #galery .card img {
   transition: all linear 0.5s;
-  filter: grayscale(100%);  
+  filter: grayscale(0%);  
 }
 
 #galery .card:hover .group .text  {
